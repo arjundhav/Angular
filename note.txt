@@ -1,0 +1,42 @@
+What is node js used for?
+- Node. js is an open-source, cross-platform JavaScript runtime environment and library for running web applications outside the client's browser.
+
+What node js can do?
+- 
+    Node.js can generate dynamic page content
+    Node.js can create, open, read, write, delete, and close files on the server
+    Node.js can collect form data
+    Node.js can add, delete, modify data in your database
+
+Npm is a package manager for the javascript libraries and frameworks.
+
+
+commands: 
+
+nvm list      // node version manager
+nvm use versionNum
+node -v 
+npm install typescript -g                //node package manager
+npm list -g              //installed packages
+tsc --v
+tsc a.ts
+tsc a.ts --watch
+
+
+TypeScript:      It is open source OOP language.
+                 It is strongly typed superset of JS which complies to plain JS
+                 It contain all elements of JS.
+
+Why use TS:    It supports static typing,strongly  typed,modules,optional params.
+               It suppports the classes,interfaces,inheritance,polymorphism,generics,enums.
+               It is fast,clean,simple & easy to learn.
+               It provides error -checking feature at compilation time.
+
+
+JavaScript: 
+            It is a lightweight ,dynamic, interpreted or just-in-time compiled programming language.
+            JavaScript can update and change both HTML and CSS.
+            JavaScript can calculate, manipulate and validate data.
+
+            JS dynamic capabilities include runtime object construction, variable parameter lists, function variables, object introspection (via for...in and Object utilities)
+               and source-code recovery (JavaScript functions store their source text and can be retrieved through toString()).                 
