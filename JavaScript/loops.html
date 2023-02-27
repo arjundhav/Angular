@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Loops</h1>
+    <div id="main">
+        <h2>For Loop</h2>
+        <script>
+            for(var i=0;i<10;i++){
+                document.write(`For Loop`+i);
+            }
+        </script>
+
+        <h2> For each Loop </h2>
+        <script>
+            var arr = [1,2,3,4,5];
+            arr.forEach(function(element){
+                document.write(element);
+            });
+        </script>
+
+        <h2>While Loop</h2>
+        <script>
+            var i=0;
+            while(i<10){
+                document.write(`While Loop`+i);
+                i++;
+            }
+        </script>
+
+        <h2>Do While Loop</h2>
+        <script>
+            var i=0;
+            do{
+                document.write(`Do While Loop`+i);
+                i++;
+            }while(i<10);
+        </script>
+
+        <h2>While llop with break </h2>
+        <script>
+            var i=0;
+            while(i<10){
+                document.write(`While Loop with break`+i);
+                i++;
+                if(i==5){
+                    break;
+                }
+            }
+        </script>
+
+        <h2>For In Loop</h2>
+        <script>
+            var arr = [1,2,3,4,5];
+            for(var i in arr){
+                document.write(`For in Loop`+ arr[i]);
+            }
+        </script>
+        <h2>For Of Loop</h2>
+        <script>
+            var arr = [1,2,3,4,5];
+            for(var i of arr){
+                document.write(`For of Loop`+i);
+            }
+        </script>
+    </div>
+</body>
+</html>
