@@ -2,8 +2,7 @@ What is node js used for?
 - Node. js is an open-source, cross-platform JavaScript runtime environment and library for running web applications outside the client's browser.
 
 What node js can do?
-- 
-    Node.js can generate dynamic page content
+-   Node.js can generate dynamic page content
     Node.js can create, open, read, write, delete, and close files on the server
     Node.js can collect form data
     Node.js can add, delete, modify data in your database
