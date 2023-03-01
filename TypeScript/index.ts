@@ -28,3 +28,7 @@ var h: string|undefined|number=''; //generic datatype
 
 //var i!:string="";    undefined var
  
+//Type Assertion : mechanism which tells the compiler about the type of a variabl
+var j:any=20;
+var k=j as string;
+console.log(k);

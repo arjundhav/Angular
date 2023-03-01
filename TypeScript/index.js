@@ -20,3 +20,7 @@ var n = any(2, ' Arjun');
 console.log(n);
 var h = ''; //generic datatype
 //var i!:string="";    undefined var
+//Type Assertion : mechanism which tells the compiler about the type of a variabl
+var j = 20;
+var k = j;
+console.log(k);
