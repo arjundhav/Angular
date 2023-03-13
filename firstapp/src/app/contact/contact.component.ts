@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
   mobile = 9423139185;
-  email = 'arjundhav';
+  email = 'arjundhav@gmail.com';
   address = 'Pune';
 }

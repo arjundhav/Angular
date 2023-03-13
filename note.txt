@@ -50,9 +50,41 @@ syntax:
 
 
 
-Component command: ng g c Nav
+Component:
+
+command: ng g c Nav
 
 A component file, <component-name>.component.ts
 A template file, <component-name>.component.html
 A CSS file, <component-name>.component.css
 A testing specification file, <component-name>.component.spec.ts
+
+
+
+Module: ng g m user
+
+Directives:
+ 
+ Component - Responsible for HTML layout  *ngIf , *ngFor,*ngSwitch
+ structural - change dom by add/remove element
+ Attributes -  change appearance or behaviour of dom
+
+ only in html:
+ #   - variable name
+ []  - property binding
+ ()  - event binding
+[()] - two way binding
+  *  - structural Directives
+{{}} - string interpolation
+
+
+
+Decorators: used for passing meta
+
+4 types: class, property, method, parameters decorator
+
+@ng-Module - C
+@component - C
+@Injectable - define services
+@input @output : used for passing data from DOM - property
+
