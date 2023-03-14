@@ -65,8 +65,8 @@ Module: ng g m user
 
 Directives:
  
- Component - Responsible for HTML layout  *ngIf , *ngFor,*ngSwitch
- structural - change dom by add/remove element
+ Component - Responsible for HTML layout  
+ structural - change dom by add/remove element *ngIf , *ngFor,*ngSwitch
  Attributes -  change appearance or behaviour of dom
 
  only in html:
