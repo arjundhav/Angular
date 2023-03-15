@@ -56,8 +56,8 @@ structural Directives: binds the value of var to the corresponding property of t
     <h2 *ngSwitchCase="'five'">Five</h2>
     <h2 *ngSwitchDefault>Default</h2>
 </div>    
-
 <hr>
+
 <!-- ngFor -->
 <h3 style="background-color: aqua;"> ngFor </h3>
 
@@ -66,3 +66,28 @@ structural Directives: binds the value of var to the corresponding property of t
     <h2> {{i+1}}. {{s.name}} - {{s.marks}} ...{{e}} ...{{o}} ...{{f}} ...{{l}}</h2>
 </div>
 <hr>
+
+<!-- ngStyle -->
+<h3 style="background-color: aqua;"> ngFor </h3>
+
+<table  class="table" border="1px" [cellPadding]="10" [cellSpacing]="25">
+       <thead class="thead-light"> 
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Designation</th>
+            <th>Gender</th>
+            <th>Age</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let e of Employe, getTrackByMethod">
+            <td>{{e.id}}</td>
+            <td>{{e.name}}</td>
+            <td>{{e.desg}}</td>
+            <td>{{e.gender}}</td>
+            <td>{{e.age}}</td>
+        </tr>
+        </tbody>
+</table>
+<button class="btn btn-primary" (click)="getMoreEmploye()">Add New Employees</button>

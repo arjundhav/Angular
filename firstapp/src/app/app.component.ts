@@ -8,18 +8,21 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'firstapp';
   name = "Arjun";
-  isvalid: boolean = true;
 
+  //ngif
+  isvalid: boolean = true;
   ishandle(valid: boolean) {
     this.isvalid = valid;
 
   }
 
+  //ngswitch
   choose: any = '';
   selectValue(choose: any) {
     this.choose = choose.target.value;
   }
 
+  //ngfor
   students:any[]=[{
     name: "Arjun",
     marks:59
@@ -34,4 +37,76 @@ export class AppComponent {
   }
 ]
 
+// Employee data using track by method
+  Employe:any[]=[]
+  constructor(){
+    this.Employe=[
+    {
+      id:1,
+      name: "Arjun",
+      desg: 'Software Developer',
+      gender: 'male',
+      age: 23,
+    },
+    {
+      id:2,
+      name: "Kunal",
+      desg: 'Frontend Developer',
+      gender: 'male',
+      age: 24, 
+    },
+    {
+      id:3,
+      name: "Revati",
+      desg: 'Java Developer',
+      gender:'female',
+      age: 25,
+    },
+    {
+      id:4,
+      name: "Pallavi",
+      desg:'Python Developer',
+      gender: 'female',
+      age: 26,
+    } 
+    ]       
+  }
+
+  getMoreEmploye(){
+    this.Employe=[
+      {
+        id:5,
+        name: "Omkar",
+        desg: 'Senior Developer',
+        gender: 'male',
+        age: 23,
+      },
+      {
+        id:6,
+        name: "Ravi",
+        desg: 'Backend Developer',
+        gender: 'male',
+        age: 24, 
+      },
+      {
+        id:7,
+        name: "Rohini",
+        desg: 'Jr Developer',
+        gender:'female',
+        age: 25,
+      },
+      {
+        id:8,
+        name: "Preeti",
+        desg:'Django Developer',
+        gender: 'female',
+        age: 26,
+      }
+    ]
+  }
+
+  getTrackByMethod(index:Number,Employe:any):string{
+    return Employe.EmployeId
+  }
+  
 }

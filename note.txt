@@ -88,3 +88,7 @@ Decorators: used for passing meta
 @Injectable - define services
 @input @output : used for passing data from DOM - property
 
+To install bootstrap: npm i bootstrap@5.1.3
+
+then configure angular.json file style & scripts by giving path pf bootstrap dist folder
+Then restart app with ng serve bootstrap will be enabled.
