@@ -18,7 +18,6 @@ structural Directives: binds the value of var to the corresponding property of t
 -->
 
 <!-- Structural Directives: NgIf,NgFor,NgSwitch .We use it with * as prefix.
-  
     With <ng-template>, you can define template content that is only being rendered by Angular when you, whether directly or indirectly, 
     specifically instruct it to do so, allowing you to have full control over how and when the content is displayed.
 -->
@@ -91,3 +90,23 @@ structural Directives: binds the value of var to the corresponding property of t
         </tbody>
 </table>
 <button class="btn btn-primary" (click)="getMoreEmploye()">Add New Employees</button>
+<hr>
+
+<ul>
+    <li *ngFor="let c of countryDetails" class="text-danger">
+        {{c.country}}
+    <ul>
+        <li  *ngFor="let p of c.people" class="text-primary">
+            {{p.name}} 
+        </li>
+    </ul>
+    </li>
+</ul> 
+
+<!-- Attribute Directive -->
+<ul>
+    <li *ngFor="let p of person && let c of countryDetails"  [ngClass]="{'text-danger': c.country==='India', 
+        'text-primary':c.country==='UK',
+        'text-danger':c.country==='USA'}">
+        {{c.country}} ====> {{p.name}}</li>
+</ul>      

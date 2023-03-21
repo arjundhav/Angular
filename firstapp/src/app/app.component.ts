@@ -109,4 +109,68 @@ export class AppComponent {
     return Employe.EmployeId
   }
   
+  countryDetails:any[]=[
+    {
+      "country": "India",
+      people:[
+        {
+          name: "Arjun"
+        },
+        {
+          name: "Pooja"
+        },
+        {
+          name: "Omkar"
+        },
+      ]
+    },
+    {
+      "country": "USA",
+      people:[
+        {
+          name: "Rohit"
+        },
+        {
+          name: "Ravi"
+        },
+        {
+          name: "Rohini"
+        }
+      ]
+    },
+    {
+      "country": "UK",
+      people:[
+        {
+          name: "Kunal"
+        },
+        {
+          name: "Pallavi"
+        },
+        {
+          name: "Revati"
+        }
+      ]
+    }
+  ]
+  
+  person:any[]=[ 
+    {
+      "name": "Arjun",
+      "country":"India"
+    },
+    {
+      "name": "Riddhi",
+      "country":"USA"
+    },
+    {
+      "name": "Pooja",
+      "country":"UK"
+    },
+    {
+      "name": "Riya",
+      "country":"Russia"
+    }
+  ]
+
 }
