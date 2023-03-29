@@ -1,0 +1,70 @@
+ngSwitch
+ngSwitch is actually comprised of two directives, an attribute directive and a structural
+directive. It's very similar to a switch statement in javascript and other programming lanuages,but in the tempalte.
+
+The ng-switch directive lets you hide/show HTML elements depending on an expression.
+
+We can also define a deafault section, by using the ng-switch-default directive, to show a section if none of the other
+sections get a match.
+
+Three things to keep in mind -NgSwitch, ngSwitchCase, ngSwitchDefault.
+
+app.component.html
+<h2>using switch</h2>
+<select (change)="setvalue($event)">
+<option value="">--select--</option>
+<option value="one">one</option>
+<option value="two">Two</option>
+<option value="three">Three</option>
+<option value="another">Another</option>
+
+</select>
+<div [ngSwitch]="choose">
+<h3 *ngSwitchCase="'one'">First</h3><!-- double quots in single quote means we pass string-->
+<h3 *ngSwitchCase="'two'">Second</h3>
+<h3 *ngSwitchCase="'three'">Third</h3>
+<h3 *ngSwitchDefault>Default</h3>
+</div>
+
+
+App.component.ts
+export class Appcomponent{
+public choose='';
+setvalue(drp:any){
+this.choose=drp.target.value;
+}
+
+**************************************************
+Acess Modifier in Typescript:
+public-It is default. no need to mention it.
+private -If is used in function only.
+protected-same as like private
+
+class Students{
+private firstname:string;
+private lastname:string;
+private age:number;
+
+
+constructor( private firstname:string, private age:number, private lastname?:string){
+this.firstname = firstname;
+this.lastname = lastname;
+this.age = age;
+}
+getFirstname(){
+console.log("My firstname is" + this.firstname + " " + this.age);
+}
+getLastname(){
+}
+}
+
+let stu = new Students("Vishank",10);
+stu.age =11;
+stud.getFirstname();
+
+
+
+
+
+
+

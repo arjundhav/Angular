@@ -1,0 +1,133 @@
+NgIf conditionally includes a template based on value of expression
+
+It adds or removes the HTML element in DOM layout.
+
+The basic syntax of the ngIf directive is simple & effective,all
+we need to do is prefix the directive name with an asterisk(*)
+and add it anywhere inside our template.
+
+ngIF:
+NgIf is an structural directive that can add or remove host element and its
+descendants in DOM layout at run time. It conditionally shows the inline template.
+
+NgIf works on the basis of true and false result of given expression. If condition 
+is true the elements will be added into DOM layout otherwise they will be removed.
+<div *ngIf="condition">...</div>
+
+code:
+app.component.html
+<h2>This is ngIf example</h2>
+<input type='radio' name='radio1' (click)='changevalue(true)'>True
+<input type='radio' name='radio1' (click)='changevalue(false)'>false
+<div *ngIf='isvalid'>
+This is valid data</div>
+
+<div *ngIf='isvalid'>
+This is  not valid data</div>
+
+app.component.ts
+class Appcomponent{
+title ='..'
+isvalid:boolean:true
+
+changevalue(valid){
+this.isvalid=valid;
+}
+}
+******************************************************
+ngIf with else
+else is used when we want to display something for false condition
+The else block is used as follows.
+<div *ngIf ="condition; else elseBlock">....</div>
+
+<ng-template #elseBlock>...</ng-template>
+
+
+For else block we need to use <ng-template> element. It is referred
+by a template reference varaiable. NgIf will use that template reference
+variable to display else block when condition is false.
+
+<--NOTE:
+Ng-template:
+ng-Template is an Angular element that is used for rendering HTML in a template.
+It is not directly rendered directly on DOM.
+
+one of the main uses for <ng-template> is to hold template content that will
+be used by structural directives.Those directives can add and remove copies of the template
+content based on their own logic. When using structural directive shorthand, Angular creates an
+<ng-template> element behind the scenes.-->
+
+
+<h2>This is ngIf Else example</h2>
+
+<input type='radio' name='radio1' (click)='changevalue(true)'>True
+<input type='radio' name='radio1' (click)='changevalue(false)'>false
+
+<div *ngIf='isvalid; else elseblock'>
+This is valid data</div>
+
+<ng-template #elseblock>
+<div>
+This is  not valid data using else block</div>
+<ng-template>
+
+app.component.ts
+class Appcomponent{
+title ='..'
+isvalid:boolean:true
+
+changevalue(valid){
+this.isvalid=valid;
+}
+}
+*******************************************************
+ngIf with Then and Else
+
+NgIfwith then and else is used as folllows.
+<div *ngIf="condition; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>...</ng-template>
+<ng-template #elseBlock>...</ng-template>
+
+When condition is true, then the <ng-template> with reference variable thenBlock is
+excuted and when condition is false then the <ng-template. with refrernce variable elseBlock
+is excuted. The value of thenBlock and elseBlock can be changed at run time.
+
+we can have more than one <ng-template> for then and else block and at
+runtime we can switch to those <ng-template> by chnaging the value
+of thenBlock and elseBlock. At one time only one <ng-template> for thenBlock
+or elseBlock will run.
+
+
+<h2>This is ngIf  then elseBlock example</h2>
+<input type='radio' name='radio1' (click)='changevalue(true)'>True
+<input type='radio' name='radio1' (click)='changevalue(false)'>false
+
+<div *ngIf='isvalid; then thenBlock; else elseBlock'></div>
+<ng-template #thenBlock>
+<div>
+This is valid data from then block
+</div>
+<ng-template>
+
+<ng-template #elseBlock>
+<div>
+This is  not valid data from else block</div>
+</div>
+</ng-template>
+
+app.component.ts
+class Appcomponent{
+title ='..'
+isvalid:boolean:true
+
+changevalue(valid){
+this.isvalid=valid;
+}
+}
+
+{{}}-Interpolation
+()-event
+#- variable
+[]-one-way data binding
+([])- two-way binding
+* -structural directives
