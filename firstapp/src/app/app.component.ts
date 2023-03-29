@@ -105,7 +105,7 @@ export class AppComponent {
     ]
   }
 
-  getTrackByMethod(index:Number,Employe:any):string{
+  getTrackByMethod(index:number,Employe:any):string{
     return Employe.EmployeId
   }
   

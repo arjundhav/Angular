@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { UserRoutingModule } from '../user-routing.module';
 import { SavingAccComponent } from './saving-acc/saving-acc.component';
 import { CurrentAccComponent } from './current-acc/current-acc.component';
 
@@ -11,7 +13,8 @@ import { CurrentAccComponent } from './current-acc/current-acc.component';
     CurrentAccComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    UserRoutingModule,
   ]
 })
 export class UserModule { }

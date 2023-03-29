@@ -1,6 +1,6 @@
-<app-nav></app-nav>
+<!-- <app-nav></app-nav>
 <app-about></app-about>
-<app-contact></app-contact>
+<app-contact></app-contact> -->
 
 <!-- 
 #   - variable name
@@ -21,13 +21,13 @@ structural Directives: binds the value of var to the corresponding property of t
     With <ng-template>, you can define template content that is only being rendered by Angular when you, whether directly or indirectly, 
     specifically instruct it to do so, allowing you to have full control over how and when the content is displayed.
 -->
-<hr>
+<!-- <hr>
 <h3 style="background-color: aqua;"> ngIf </h3>
 <input type="radio" name="radio1" (click)="ishandle(true)">True
 <input type="radio" name="radio1" (click)="ishandle(false)">False
 
 <!-- ngIf -->
-<div *ngIf="isvalid then thenBlock else elseBlock"></div>
+<!--<div *ngIf="isvalid then thenBlock else elseBlock"></div>
 <ng-template #thenBlock>
     <h2 style="color: blue;">I am True Block</h2>
 </ng-template>    
@@ -37,9 +37,9 @@ structural Directives: binds the value of var to the corresponding property of t
 </ng-template> 
 
 <hr>
-<h3 style="background-color: aqua;"> ngSwitch </h3>
+<h3 style="background-color: aqua;"> ngSwitch </h3> -->
 <!-- ngSwitch -->
-<select (click)="selectValue($event)">
+<!-- <select (click)="selectValue($event)">
     <option value="one">First</option>
     <option value="two">Second</option>
     <option value="three">Third</option>
@@ -55,19 +55,19 @@ structural Directives: binds the value of var to the corresponding property of t
     <h2 *ngSwitchCase="'five'">Five</h2>
     <h2 *ngSwitchDefault>Default</h2>
 </div>    
-<hr>
+<hr> -->
 
 <!-- ngFor -->
-<h3 style="background-color: aqua;"> ngFor </h3>
+<!-- <h3 style="background-color: aqua;"> ngFor </h3>
 
 <h2>Sr.    Name       Marks       Even      Odd     First     Last</h2><hr>
 <div *ngFor="let s of students; let i=index; let e =even; let o=odd; let f=first; let l=last">
     <h2> {{i+1}}. {{s.name}} - {{s.marks}} ...{{e}} ...{{o}} ...{{f}} ...{{l}}</h2>
 </div>
-<hr>
+<hr> -->
 
 <!-- ngStyle -->
-<h3 style="background-color: aqua;"> ngFor </h3>
+<!-- <h3 style="background-color: aqua;"> ngFor </h3>
 
 <table  class="table" border="1px" [cellPadding]="10" [cellSpacing]="25">
        <thead class="thead-light"> 
@@ -101,12 +101,33 @@ structural Directives: binds the value of var to the corresponding property of t
         </li>
     </ul>
     </li>
-</ul> 
+</ul>  -->
 
 <!-- Attribute Directive -->
-<ul>
+<!-- <ul>
     <li *ngFor="let p of person && let c of countryDetails"  [ngClass]="{'text-danger': c.country==='India', 
         'text-primary':c.country==='UK',
         'text-danger':c.country==='USA'}">
         {{c.country}} ====> {{p.name}}</li>
-</ul>      
+</ul>       -->
+
+<nav class="nav">
+<ul class="nav justify-content-center">
+    <li class="nav-item">
+        <a class="nav-link" [routerLink]="['']">Home</a> 
+    </li>
+    <li class="nav-item">
+        <a class="nav-link"[routerLink]="['about']" >About</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link"[routerLink]="['contact']" >Contact</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" [routerLink]="['nav']" >Navigate</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link"[routerLink]="['saving']" >Saving Acc</a>
+    </li>    
+  </ul>
+</nav> 
+<router-outlet></router-outlet>   

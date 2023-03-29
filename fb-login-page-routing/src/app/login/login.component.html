@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-6">
+        <img class="fb_logo _8ilh img" src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="Facebook">        
+        <!-- <h2>Facebook helps you connect and share with the people in your life.</h2> -->
+        <img class="card-Image" id="people" src="https://thumbs.dreamstime.com/b/seamless-profile-people-pattern-stylish-men-women-various-hairstyles-young-elderly-characters-heads-modern-portraits-social-169287579.jpg" alt="people"/>
+
+      </div>
+        <div class="col-6" style="padding-top: 30px;">
+            <div class="card">
+              <div class="card-body" style="padding: 30px; margin-top: 50px; margin-right: 10px;">
+                    <h1 class="card-title">Facebook Login</h1>
+                    <p class="card-text" >Connect with friends and the world around you on Facebook.</p>
+                    <form class="card-body">  
+                     
+                      <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" placeholder="Enter Email" required>
+                      </div>
+                     
+                      <div class="form-group">
+                        <label >Password</label>
+                        <input type="password" class="form-control" placeholder="Enter password" required>
+                      </div> 
+                     
+                      <div>
+                        <a [routerLink]="'/profile'" id="sub" type ="submit" class="btn btn-primary">Login</a> <br>
+                      </div>
+                      <hr>
+                      <a  [routerLink]="'/forgot'" class="link">Fogotten Password</a>
+                      <a [routerLink]="'/signup'" >SignUp</a>
+                    </form>
+                   
+                  </div>
+            </div>
+        </div>
+    </div>
+
+  </div>

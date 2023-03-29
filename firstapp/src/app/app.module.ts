@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './home/home.component';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   //All component declarations
@@ -13,11 +15,13 @@ import { ContactComponent } from './contact/contact.component';
     AppComponent,
     NavComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule, 
-    AppRoutingModule
+    AppRoutingModule,
+    UserModule
   ],
   providers: [],  //services
   bootstrap: [AppComponent]

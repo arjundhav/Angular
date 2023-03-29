@@ -1,0 +1,46 @@
+/* .card{
+    width:60%;
+    height:300px;
+    margin-top:50px;
+    margin-left:10px;
+    border:none;
+    box-shadow:3px 3px 3px lightgray;
+} */
+
+.card-body{
+    padding:30px;
+    margin-top:50px;
+    margin-right:10px;
+}
+
+div{
+    margin-bottom: 20px;
+}
+
+/* style="padding: 30px; margin-top: 50px; margin-right: 10px;" */
+input{
+    width:80%;
+    height:40px;
+    padding:20px;
+    margin:20px;
+}
+
+#sub{
+    width:40%;
+    height:40px;
+    padding:5px;
+    margin-bottom:20px;
+    text-align: center;
+    background-color:rgb(45, 120, 149);
+    color:white;
+    border-radius:5px;
+}
+
+a{
+    margin:10px;
+    padding:30px;
+    text-align: center;
+    text-decoration:underline;
+    margin-top: 30px;
+    padding-top: 60px;
+}
