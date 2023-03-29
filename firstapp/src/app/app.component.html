@@ -131,3 +131,26 @@ structural Directives: binds the value of var to the corresponding property of t
   </ul>
 </nav> 
 <router-outlet></router-outlet>   
+
+<!-- Two way Data Binding -->
+
+<input type="text" [(ngModel)]="data">
+<h2> {{data}} </h2>
+
+<!-- temple-driven form -->
+<form #regForm="ngForm" (submit)="RegisterForm(regForm)">
+    <diV>
+        <input type="text" ngModel placeholder="Enter UserName" #username name="ngModel" required name="username">
+    </diV>
+
+    <div>
+        <input type="email" ngModel placeholder="Enter Email" #email email="ngModel" required name="email">
+    </div>
+    
+    <div>
+        <input type="password" ngModel placeholder="Enter Password" #password  password="ngModel" required name="password">
+    </div> 
+    <br>
+    <input type="submit" value="Submit">
+
+</form>    

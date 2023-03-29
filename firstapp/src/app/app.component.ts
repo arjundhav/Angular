@@ -173,4 +173,9 @@ export class AppComponent {
     }
   ]
 
+   //two way binding
+   data:any=''
+
+   //forms
+   RegisterForm:any={}
 }

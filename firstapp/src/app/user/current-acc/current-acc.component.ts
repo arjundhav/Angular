@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './current-acc.component.html',
   styleUrls: ['./current-acc.component.css']
 })
+
 export class CurrentAccComponent {
 
 }
