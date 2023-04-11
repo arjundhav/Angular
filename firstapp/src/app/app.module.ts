@@ -7,8 +7,8 @@ import { NavComponent } from './nav/nav.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
-import { UserModule } from './user/user.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BeveragesComponent } from './beverages/beverages.component';
 
 @NgModule({
   //All component declarations
@@ -17,13 +17,15 @@ import { FormsModule } from '@angular/forms';
     NavComponent,
     AboutComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    BeveragesComponent
   ],
   imports: [
     BrowserModule, 
     AppRoutingModule,
-    UserModule,
-    FormsModule
+    // UserModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],  //services
   bootstrap: [AppComponent]

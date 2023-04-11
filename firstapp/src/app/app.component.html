@@ -26,7 +26,7 @@ structural Directives: binds the value of var to the corresponding property of t
 <input type="radio" name="radio1" (click)="ishandle(true)">True
 <input type="radio" name="radio1" (click)="ishandle(false)">False
 
-<!-- ngIf -->
+!-- ngIf -->
 <!--<div *ngIf="isvalid then thenBlock else elseBlock"></div>
 <ng-template #thenBlock>
     <h2 style="color: blue;">I am True Block</h2>
@@ -114,7 +114,7 @@ structural Directives: binds the value of var to the corresponding property of t
 <nav class="nav">
 <ul class="nav justify-content-center">
     <li class="nav-item">
-        <a class="nav-link" [routerLink]="['']">Home</a> 
+        <a class="nav-link" [routerLink]="['/firstapp/src/index.html']">Home</a> 
     </li>
     <li class="nav-item">
         <a class="nav-link"[routerLink]="['about']" >About</a>
@@ -127,7 +127,16 @@ structural Directives: binds the value of var to the corresponding property of t
     </li>
     <li class="nav-item">
         <a class="nav-link"[routerLink]="['saving']" >Saving Acc</a>
-    </li>    
+    </li>   
+    <li class="nav-item">
+        <a class="nav-link"[routerLink]="['current']" >Current Acc</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" [routerLink]="['admin/login']">Login</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" [routerLink]="['admin/list']">List</a>
+    </li> 
   </ul>
 </nav> 
 <router-outlet></router-outlet>   
@@ -140,17 +149,73 @@ structural Directives: binds the value of var to the corresponding property of t
 <!-- temple-driven form -->
 <form #regForm="ngForm" (submit)="RegisterForm(regForm)">
     <diV>
-        <input type="text" ngModel placeholder="Enter UserName" #username name="ngModel" required name="username">
+        <input type="text" ngModel placeholder="Enter UserName" #username="ngModel" required name="username">
+        <span class="text-danger" *ngIf="username.touched"> Please Enter your Usernme</span>
     </diV>
 
     <div>
-        <input type="email" ngModel placeholder="Enter Email" #email email="ngModel" required name="email">
+        <input type="email" ngModel placeholder="Enter Email" email #email="ngModel" required name="email">
+        <span class="text-danger" *ngIf="email.touched && !email.valid"> Please Enter your Email</span>
     </div>
     
     <div>
-        <input type="password" ngModel placeholder="Enter Password" #password  password="ngModel" required name="password">
+        <input type="password" ngModel placeholder="Enter Password" #password="ngModel" required name="password">
+        <span class="text-danger" *ngIf="password.touched"> Please Enter Password</span>
     </div> 
     <br>
-    <input type="submit" value="Submit">
+    <button  type="submit" class="btn btn-primary" id="Register"
+    [disabled]="!regForm.valid">Register</button>
 
 </form>    
+
+<hr>
+
+<!-- // Reactive form  - in form  -->
+<div class="container">
+    <div class="row">
+        <form  [formGroup]="form" (submit)="submit()">
+           
+            <div class="form-group">
+
+                <label for="username">Username: </label><br>
+                <input type="text" formControlName="name" id="name" placeholder="Enter Username">
+                <div class="text-danger" *ngIf="f['name'].touched && f['name'].invalid">
+                    <div class="text-danger" *ngIf="f['name'].errors?.['required'].minLength(3)">
+                        Username is required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label><br>
+                <input type="email" formControlName="email" id="email" placeholder="Enter Email">
+            </div>
+
+            <div class="form-group">
+                <label for="msg">Message: </label> <br>
+                <input type="text" formControlName="msg" id="msg">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        
+        </form>
+    </div>
+</div>
+
+<!-- Input & Output decorators-->
+<div class="parent">
+    <h2>Parent Component</h2>
+    <ul>
+        <li *ngFor="let bev of beverages">
+            {{bev}}
+        </li>
+    </ul>
+    <app-beverages [beverages]="currentBevarages"
+    (newBeveragesEvent)="addnewBevarage($event)"></app-beverages>
+</div>
+
+<!-- jquery code -->
+<div style="border:1px solid red; border-radius:20px; 
+ background-color: skyblue; width: 500px; height: 200px;">
+    <h2 style="color:red; postion:relative; margin-top:10px;">jQuery</h2>
+</div>
+<button class="btn btn-primary" >Click</button>

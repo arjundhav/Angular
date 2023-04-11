@@ -81,12 +81,18 @@ Directives:
 
 
 
-Decorators: used for passing meta
+Decorators: Decorators are design patterns used to isolate the modification or decoration of a class without modifying the source code.
+            used for passing meta
 
-4 types: class, property, method, parameters decorator
+4 types: class, property, method, parameters decorators
 
-@ng-Module - C
-@component - C
+  Class decorators, such as @Component and @NgModule
+  Property decorators for properties inside classes, such as @Input and @Output
+  Method decorators for methods inside classes, such as @HostListener
+  Parameter decorators for parameters inside class constructors, such as @Inject
+
+@ng-Module - Class Decorators
+@component - Class Decorators
 @Injectable - define services
 @input @output : used for passing data from DOM - property
 
@@ -111,5 +117,20 @@ CMD for Routing:
 
 This creates a separate file named user-routing.module.ts to store the NgModule's routes
 
-CMD:   ng generate module app-routing --flat --module=app
+CMD:   
+       ng generate module my-module --routing  
+       ng generate module app-routing --flat --module=app
        ng g m user-routing --flat --module=user
+
+
+AuthGuard:  AuthGuard is used to protect the routes from unauthorized access in angular.
+ cmd: ng g guard auth 
+
+ - caNActive: canActivate has to return true to access the page. If it returns false, we can not access the page.
+ - canActivateChild
+ - cCanDeactivate
+ - canLoad
+
+
+Lazy loading is a technology of angular that allows you to load JavaScript components when a specific route is activated. 
+It improves application load time speed by splitting the application into many bundles.

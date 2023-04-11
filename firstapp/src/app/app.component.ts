@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import * as $ from 'jquery';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -177,5 +178,40 @@ export class AppComponent {
    data:any=''
 
    //forms
-   RegisterForm:any={}
+   RegisterForm(regForm:NgForm){
+      console.log(regForm)
+   };
+
+   // forms!;FormGroup
+   form = new FormGroup({
+      name: new FormControl('',[Validators.required,Validators.minLength(3),Validators.maxLength(15)]),
+      email: new FormControl('',[Validators.required,Validators.email]),
+      msg:new FormControl('',[Validators.required])
+      
+   });
+
+   get f(){
+      return this.form.controls; 
+   };
+
+    submit(){
+      console.log(this.form.value)
+    }
+
+    currentBevarages="Mango Juice"
+    beverages=["Tea","Coffee","Juices","Shakes"]
+
+    addnewBevarage(newBeverage:string){
+      this.beverages.push(newBeverage)
+    }
+
+    public ngOnit():void{
+      $(document).ready(function(){
+        $("button").click(function(){
+          var div=$("div")
+          div.animate({right:'100px'},2000);
+          div.animate({fontSize:'300px'},1000);
+        })
+      })
+    }
 }

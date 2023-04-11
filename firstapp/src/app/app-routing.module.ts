@@ -10,11 +10,13 @@ import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   { path:'' ,pathMatch:'full',redirectTo:'home'},
-  { path: 'home' ,component:HomeComponent},
+  { path:'home' ,component:HomeComponent},
   { path:'nav',canActivate:[AuthGuard],component: NavComponent},
   { path:'about' ,component:AboutComponent},
   { path:'contact' ,component:ContactComponent},
-  { path:'**' ,redirectTo:'home'}
+  { path:'**' ,redirectTo:'home'},
+  { path:'admin',loadChildren:()=>import('./admin/admin.module').then(m=>m.AdminModule)}
+  
 ];
 
 @NgModule({

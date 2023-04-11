@@ -1,0 +1,37 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 pt-5" style="height: 100vh; background-color:grey">
+        <mat-card>
+          <form [formGroup]="signUP">
+            <mat-form-field appearance="outline"  >
+              <mat-label>Task to create</mat-label>
+              <input matInput placeholder="Placeholder" formControlName="task">
+              <mat-hint>Add task</mat-hint>
+            </mat-form-field>
+            <button mat-raised-button color="primary" (click)="Addtask()">Add</button>
+          </form>
+        </mat-card>
+      </div>
+    </div>
+   <div class="col-lg-9">
+    <div cdkDropListGroup>
+      <div class="row">
+        <div class="col-lg-3">
+            <div >
+              <div class="example-container">
+                <h2>To do</h2>
+  
+                <div
+                  cdkDropList
+                  [cdkDropListData]="tasks"
+                  class="example-list"
+                  (cdkDropListDropped)="drop($event)">
+                  <div class="example-box" *ngFor="let item of tasks" cdkDrag>{{item.description}}</div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+   </div>
