@@ -13,6 +13,13 @@ import { ITask } from './task';
 export class ToDoListComponent implements OnInit {
 tasks:ITask[]=[];
 signUP!:FormGroup
+updateID!: any;
+done: ITask[]=[];
+isEditEnabled:boolean = false;
+action: string='Add';
+Inprogress:ITask[]=[];
+Done:ITask[]=[];
+
   constructor(private fb:FormBuilder) { }
 
   ngOnInit(): void {
@@ -21,14 +28,46 @@ signUP!:FormGroup
      } )
   }
 
-  Addtask(){
-    console.log("hi")
+  addTask(){
+    console.log("Adding Task")
     this.tasks.push({
       description:this.signUP.value.task,
-    done:false
-     } )
-
+      done:false
+     })
   }
+
+  deleteTask(i:number){
+    console.log("Deleting")
+    this.tasks.splice(i,1);
+  }
+
+  deleteTaskInprogress(i:number){
+    console.log("Deleting")
+    this.Inprogress.splice(i,1);
+  }
+
+  deleteTaskDone(i:number){
+    console.log("Deleting")
+    this.Done.splice(i,1);
+  }
+
+  editTask(item:ITask,i:number){
+    console.log("Editing")
+    this.signUP.controls['task'].setValue(item.description);
+    this.updateID=i;
+    this.isEditEnabled=true;
+  }
+
+  updateTask(){
+    console.log("Updating")
+    this.tasks[this.updateID].description=this.signUP.value.task;
+    this.tasks[this.updateID].done=true;
+    this.signUP.reset();
+    this.updateID= undefined;
+    this.isEditEnabled=false;
+  }
+
+
   drop(event: CdkDragDrop<ITask[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
