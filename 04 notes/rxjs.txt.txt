@@ -1,0 +1,20 @@
+- Reactive Extension for JavaScript(RxJS) is a JavaScript library that is used to work with Reactive programming that deals with asynchronous data calls, callbacks and event-based programs. 
+
+-  It provides one core type, the Observable, satellite types (Observer, Schedulers, Subjects) and operators inspired by Array methods (map, filter, reduce, every, etc.) to allow handling asynchronous events as collections.
+
+- Features:
+  - Observer:
+         It is a collection of callbacks that are used to specify how to listen to values   delivered by the Observable. It can be specified as an object with next(), error() and complete() methods, that will be executed when you have to interact with observable.
+
+ - Subscription
+      It is used to represent the execution of an Observable. It is primarily used to cancel the execution. For example, when the observable is created, you have to subscribe to it to execute the observable. It can also be used to cancel the execution.
+
+ - Operators:
+	Operators are simple functions used to enable a functional programming style to deal with collections with operations like map, filter, concat, flatMap, etc. It takes observable as input and gives the output also in the form of observable.
+
+ - Subject:
+	A subject is equivalent to an EventEmitter and used to multicast a value or event to multiple Observers. For example: Consider a button with an event listener; the function attached to the event will be called whenever the user will click on the button.
+
+ - Schedulers:
+	The Schedulers are centralized dispatchers that are used to control concurrency. They are used to control the execution when the subscription has to start and notified.
+	

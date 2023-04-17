@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //number methods in JavaScript
+
+        //parseInt(): converts decimal to integer without decimal
+        var e = '90.1524602503';
+        console.log(parseInt(e));
+
+        //parseFloat(): reyurns valu with decimal point
+        var e2 = '90.1524602503';
+        console.log(parseFloat(e2));
+
+        //Number.isNaN() method
+        console.log(Number.isNaN(10/0));
+
+        //Number.MAX_VALUE: returns the largest number possible in JavaScript
+        console.log(Number.MAX_VALUE);
+
+        //toFixed() - method returns decimal value
+        let num = 12.3456789;
+        console.log(num.toFixed(2));
+
+        //toPrecision() - method returns round value
+        let num1 = 12.3456789;
+        console.log(num1.toPrecision(2));
+
+        //toString() method
+        let num2 = 12.3456789;
+        console.log(num2.toString());
+
+        //valueOf() method
+        let num3 = 12.3456789;
+        console.log(num3.valueOf());
+
+        //toExponential() method
+        let num4 = 12.3456789;
+        console.log(num4.toExponential(2));
+
+        //toLocalString() method
+        let num5 = 12.3456789;
+        console.log(num5.toLocaleString());
+
+        //toLocalString() method
+        let num6 = 12.3456789;
+        console.log(num6.toLocaleString('en-US', {style: 'currency', currency: 'USD'}));
+
+        //isInteger: Given value is integer or not
+        let num7 = 12.3456789;
+        console.log(Number.isInteger(num7));
+
+        //isFinite: Given value is finite or not
+        let num8 = 12.3456789;
+        console.log(Number.isFinite(num8));
+
+
+    </script>
+</body>
+</html>

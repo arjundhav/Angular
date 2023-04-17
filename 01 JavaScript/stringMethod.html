@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //String methods
+        var str = "Hello World";
+        
+        //length
+        console.log(str.length);
+
+        //indexOf
+        console.log(str.indexOf("World"));
+
+        //lastIndexOf
+        console.log(str.lastIndexOf("l"));
+
+        //search
+        console.log(str.search("World"));
+
+        //slice
+        console.log(str.slice(0,5));
+
+        //substring
+        console.log(str.substring(0,5));
+
+        //substr
+        console.log(str.substr(0,5));
+
+        //replace
+        console.log(str.replace("World","India"));
+
+        //toUpperCase
+        console.log(str.toUpperCase());
+
+        //toLowerCase
+        console.log(str.toLowerCase());
+
+        //concat
+        console.log(str.concat("India"));
+
+        //trim
+        var str1 = "   Hello World   ";
+        console.log(str1.trim());
+
+        //charAt
+        console.log(str.charAt(0));
+
+        //charCodeAt
+        console.log(str.charCodeAt(0));
+
+        //split
+        console.log(str.split(" "));
+
+        //includes
+        console.log(str.includes("Hello"));
+
+        //startsWith
+        console.log(str.startsWith("Hello"));
+
+        //endsWith
+        console.log(str.endsWith("World"));
+
+        //repeat
+        console.log(str.repeat(3));
+
+        //string function to reverse
+        function reverseString(str){
+            var str1 = "";
+            for(var i = str.length-1; i>=0; i--){
+                str1 += str[i];
+            }
+            return str1;
+        }
+        console.log(reverseString("Arjun"));
+
+        //string function to palindrome
+        function palindrome(str){
+            var str1 = "";
+            for(var i = str.length-1; i>=0; i--){
+                str1 += str[i];
+            }
+            if(str1 == str){
+                return "Palindrome";
+            }
+            else{
+                return "Not Palindrome";
+            }
+        }
+        console.log(palindrome("madam"));
+
+        //string function to count vowels
+        function countVowels(str){
+            var count = 0;
+            var vowels = "aeiouAEIOU";
+            for(var i = 0; i<str.length; i++){
+                if(vowels.indexOf(str[i]) != -1){
+                    count++;
+                }
+            }
+            return count;
+        }
+        console.log(countVowels("Arjun"));
+
+    </script>
+</body>
+</html>

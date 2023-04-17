@@ -1,0 +1,66 @@
+ngClass directive allows us to set the CSS Dynamically for a DOM element.
+ ngClass with string
+ngClass with array
+ngClass with object
+ngClass with component method
+
+
+app.component.css
+.one{
+color:blue;
+}
+.two{
+font-size:30px;
+}
+.three{
+color:green;
+}
+.four
+{
+font-weight:bold;
+}
+
+app.component.html
+<h2>ngClass as a string</h2>
+<p [ngClass]="'one two'"> using ngclass with string example</p>
+
+<div *ngFor ="let user of users"[ngCLASS]="three four">
+{{user}}
+</div>
+
+<p [ngClass]="{'one':true,'three':false}">Example using ng class as object</p>
+
+<div [ngClass]='getcssclass('mode')>
+example using ngclass with component method
+</div
+
+app.comonent.ts
+users=[
+'ABC',
+'XYZ',
+'PQR'
+];
+
+//using component method
+getcssclass(flag:string){
+let cssclass
+let(flag=="mode"){
+cssclass={
+'one':true,
+'teo':true
+}else{
+cssclass={
+'one':false,
+'two;:true
+}
+}
+return userclass
+}
+}
+
+
+()=event
+[]=property binding
+*= structural directives
+#= variable 
+[()]=two way data binding.

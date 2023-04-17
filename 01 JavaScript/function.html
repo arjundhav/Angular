@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Operation Functions</h1>
+    <div id="main">
+        <h2> Calculator </h2>
+        <script>
+            function add(a,b){
+                return a+b;
+            }
+    
+            function sub(a,b){
+                return a-b;
+            }
+    
+            function mul(a,b){
+                return a*b;
+            }
+    
+            function div(a,b){
+                return a/b;
+            }
+
+    
+            var no1 = 10;
+            var no2 = 5;
+            document.write(`The sample input numbers are ${no1} & ${no2}<br>`);
+
+            var result = add(no1,no2);
+            document.write(`Addition is ${result}<br>`);
+    
+            result = sub(no1,no2);
+            document.write(`Substraction is ${result}<br>`);
+    
+            result = mul(no1,no2);
+            document.write(`Multiplication is ${result}<br>`);
+    
+            result = div(no1,no2);
+            document.write(`Division is ${result}<br>`);
+
+        </script>
+    </div>
+</body>
+</html>
