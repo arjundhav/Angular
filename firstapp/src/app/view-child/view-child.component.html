@@ -1,0 +1,21 @@
+  <p appDemoDirective>Change my color</p>
+<div>
+    Change Color:
+    <input type="radio" name="rd" (click)="changeColor('Green')">Green
+    <input type="radio" name="rd" (click)="changeColor('Red')">Red
+    <input type="radio" name="rd" (click)="changeColor('Cyan')">Cyan
+</div>
+
+<br><hr>
+
+<div class="card">
+    <div class="card-header" style="background-color: cadetblue;">Counter Tab</div>
+    <div class="card-body" style="background-color: darkkhaki;">
+        <app-counter></app-counter>
+        <button class="btn btn-primary" (click)="inc()">Increment</button>
+        <button class="btn btn-dark" (click)="dec()">Decrement</button>
+    </div>
+</div>
+<br><hr>
+
+

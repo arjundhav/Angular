@@ -1,0 +1,7 @@
+<h1>Parent Lifecycle</h1>
+<input type="text" placeholder="enter value" #val>
+<button (click)="submitValue(val)">Submit</button>
+<br><br>
+<app-child-lifecycle-hooks *ngIf="comp1Exist" [myvalue]="val.value">{{value}}</app-child-lifecycle-hooks>
+
+<button class="btn btn-danger text-white" (click)="destroybtn()">Destroy</button>

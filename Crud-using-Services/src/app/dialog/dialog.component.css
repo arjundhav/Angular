@@ -1,0 +1,28 @@
+form{
+  border: 2px;
+  padding: 10px;
+}
+
+mat-form-field{
+    width: 100%;
+}
+
+.example-radio-group {
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+    align-items: flex-start;
+  }
+  
+  .example-radio-button {
+    margin: 5px;
+  }
+  
+  .example-right-align {
+    text-align: right;
+  }
+
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+  

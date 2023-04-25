@@ -1,0 +1,57 @@
+<h1 style="margin:20px;">Registration Form</h1>
+
+<form [formGroup]="studentForm">
+    <mat-form-field appearance="outline">
+        <mat-label>Student Name</mat-label>
+        <input matInput placeholder="Enter your Name" formControlName="name">
+        <mat-icon matSuffix>account_circle</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Student Email</mat-label>
+        <input matInput placeholder="Enter your Email" formControlName="email">
+        <mat-icon matSuffix>email</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Choose Course</mat-label>
+        <mat-select formControlName="course">
+          <mat-option value="Full Stack">Full Stack</mat-option>
+          <mat-option value="MEAN Stack" >MEAN Stack</mat-option>
+          <mat-option value="MERN Stack">MERN Stack</mat-option>
+          <mat-option value="Java Stack">Java Stack</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <label id="example-radio-group-label" class="text-dark fw-bold">Choose Admission Status</label>
+    <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="addStatus" formControlName="status">
+     <mat-radio-button class="example-radio-button" *ngFor="let status of addStatus" [value]="status">
+        {{status}}
+     </mat-radio-button>
+    </mat-radio-group>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Choose Admission date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="date">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Message</mat-label>
+        <textarea matInput placeholder="Enter your Message" formControlName="msg"></textarea>
+        <mat-icon matPrefix>message</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Fees</mat-label>
+        <input matInput placeholder="Enter your Fees" formControlName="fees" type="number" />
+        <mat-icon matPrefix>money</mat-icon>
+    </mat-form-field>
+      
+    <mat-dialog-actions align="end">
+        <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+        <button mat-raised-button color="primary">Submit</button>
+    </mat-dialog-actions>
+
+</form>
