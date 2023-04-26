@@ -1,0 +1,34 @@
+{
+  "StudentData": [
+    {
+      "name": "Arjun",
+      "email": "arjun@gmail.com",
+      "status": "Old Admission",
+      "msg": "paid",
+      "course": "full-stack",
+      "date": "2023-04-27T18:30:00.000Z",
+      "fees": 4500,
+      "id": 1
+    },
+    {
+      "name": "Kittu",
+      "email": "kittu@gmail.com",
+      "status": "Current Admission",
+      "msg": "Half Paid",
+      "course": "full-stack",
+      "date": "2023-04-26T18:30:00.000Z",
+      "fees": 4500,
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
