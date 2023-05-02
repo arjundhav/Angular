@@ -1,12 +1,12 @@
 export class Food{
-    id!: number;
+    id!: string;
     name!: string;
     price!: number;
     tags?: string[];
     favorite!: boolean;
     stars!: number;
     imageUrl!: string;
-    origins!:string;
+    origins!:string[];
     cookTime!:string;
 }
 
