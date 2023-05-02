@@ -9,7 +9,7 @@ mat-form-field{
 
 .example-radio-group {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin: 15px 0;
     align-items: flex-start;
   }

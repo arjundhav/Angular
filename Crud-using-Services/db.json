@@ -19,6 +19,16 @@
       "date": "2023-04-26T18:30:00.000Z",
       "fees": 4500,
       "id": 2
+    },
+    {
+      "name": "Kunal",
+      "email": "Kunal@gmail.com",
+      "status": "New",
+      "msg": "Partially Paid",
+      "course": "mean stack",
+      "date": "2023-05-29T18:30:00.000Z",
+      "fees": 10000,
+      "id": 3
     }
   ],
   "comments": [
