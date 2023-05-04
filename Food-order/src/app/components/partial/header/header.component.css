@@ -35,24 +35,28 @@ ul a{
 a span{
   background: red;
   color: white;
-    padding: 0.2rem 0.5rem;
-    border-radius: 50%;
+  padding: 0.1rem 0.45rem;
+  border-radius: 100%;
+  font-size: 0.9rem;
 }
 
 .menu-container{
-    position:relative;
-   }
-   .menu{
-    position: absolute;
-    z-index: 1;
-    background: whitesmoke;
-    display: none;
-   }
-   .menu-container:hover .menu{
-    display: block;
-   }
-   .menu a{
-    width: 100%;
-    max-width: 8rem;
-   }
+  position:relative;
+}
+
+.menu{
+  position: absolute;
+  z-index: 1;
+  background: whitesmoke;
+  display: none;
+}
+   
+.menu-container:hover .menu{
+  display: block;
+}
+
+.menu a{
+  width: 100%;
+  max-width: 8rem;
+}
   
