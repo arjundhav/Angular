@@ -26,8 +26,6 @@ import { Food } from "./food";
   imageUrl:'assets/food-1.jpg',
   tags:['FastFood','Lunch','snacks']
 
-
-
 },
 {
   id:'3',
