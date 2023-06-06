@@ -1,6 +1,0 @@
-ng g c components/partial/header
-ng g c components/pages/header
-ng g s services/food
-ng g c components/pages/food-page
-
-npm i ng-starrating --force

@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="details">
+        <app-title title="Login"></app-title>
+
+        <form [formGroup]="loginForm" (ngSubmit)="submit()">
+            <app-input-container label="Email">
+                <input type="email" placeholder="Email" formControlName="email">
+        
+                <app-validations [control]="formControls['email']"
+                [showErrorsWhen]="isSubmitted"></app-validations>
+              </app-input-container>
+
+            <div class="input-container">
+                <label>Password</label>
+                <div>
+                    <input type="password" placeholder="Password" formControlName="password">
+                </div>
+                <div *ngIf="formControls['password'].errors && isSubmitted" class="error-list">
+                    <div *ngIf="formControls['password'].errors['required']" class="err">should not empty</div>
+                </div>
+            </div>
+            <div class="button">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+</div>
